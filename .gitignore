@@ -1,0 +1,10 @@
+*.retry
+*.log
+*vault*
+*secret*
+*password*
+inventory/host_vars/
+*.pem
+*.key
+inventory/hosts
+*.tar.gz

@@ -1,0 +1,13 @@
+---
+- name: Check uptime on all Linux servers
+  hosts: linux
+  become: false
+
+  tasks:
+    - name: Get uptime
+      command: uptime
+      register: uptime_output
+
+    - name: Show uptime
+      debug:
+        msg: "{{ inventory_hostname }}: {{ uptime_output.stdout }}"
